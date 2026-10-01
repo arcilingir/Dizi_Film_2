@@ -253,7 +253,6 @@ class DiziBox : MainAPI() {
 
             val atobData = Regex("""unescape\("(.*)"\)""").find(subDoc.html())?.groupValues?.get(1)
             if (atobData != null) {
-                val decodedAtob = atobData.decodeUri()
                 // Eski
                 //val decodedAtob = atobData.decodeUri()
                 // Yeni
