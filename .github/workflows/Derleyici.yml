@@ -43,8 +43,10 @@ jobs:
 #      - name: Android SDK Ayarla
 #        uses: android-actions/setup-android@v3.2.2
 
-       - name: Android SDK Ayarla   ##Setup Android SDK
-         uses: android-actions/setup-android@v4
+      - name: Android SDK Ayarla
+        run: |
+          sdkmanager --licenses --sdk_root=/usr/local/lib/android/sdk
+          sdkmanager "build-tools;34.0.0" "platforms;android-34" --sdk_root=/usr/local/lib/android/sdk
     
       - name: Eklentileri Derle
         run: |
