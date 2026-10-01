@@ -14,6 +14,7 @@ import com.lagradost.cloudstream3.utils.StringUtils.decodeUri
 import okhttp3.Interceptor
 import okhttp3.Response
 import org.jsoup.Jsoup
+import java.net.URLDecoder
 
 class DiziBox : MainAPI() {
     override var mainUrl              = "https://www.dizibox.live"
@@ -253,6 +254,10 @@ class DiziBox : MainAPI() {
             val atobData = Regex("""unescape\("(.*)"\)""").find(subDoc.html())?.groupValues?.get(1)
             if (atobData != null) {
                 val decodedAtob = atobData.decodeUri()
+                // Eski
+                //val decodedAtob = atobData.decodeUri()
+                // Yeni
+                val decodedAtob = URLDecoder.decode(atobData, "UTF-8")
                 val strAtob     = String(Base64.decode(decodedAtob, Base64.DEFAULT), Charsets.UTF_8)
                 subDoc          = Jsoup.parse(strAtob)
             }
@@ -276,7 +281,11 @@ class DiziBox : MainAPI() {
 
             val atobData = Regex("""unescape\("(.*)"\)""").find(subDoc.html())?.groupValues?.get(1)
             if (atobData != null) {
-                val decodedAtob = atobData.decodeUri()
+                // Eski
+                //val decodedAtob = atobData.decodeUri()
+                // Yeni
+                val decodedAtob = URLDecoder.decode(atobData, "UTF-8")
+
                 val strAtob     = String(Base64.decode(decodedAtob, Base64.DEFAULT), Charsets.UTF_8)
                 subDoc          = Jsoup.parse(strAtob)
             }
