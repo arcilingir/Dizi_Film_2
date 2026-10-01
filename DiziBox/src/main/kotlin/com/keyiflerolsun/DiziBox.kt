@@ -48,34 +48,34 @@ class DiziBox : MainAPI() {
 
 //acilmasi uzun sürdüğü için kategoriden bir kaçı devre dışı bırakıldı.
     override val mainPage = mainPageOf(
-        "${mainUrl}/tum-bolumler/page/SAYFA/?tip=populer"               to "Popüler Dizilerden Son Bölümler",
-        "${mainUrl}/tum-bolumler/page/SAYFA/"                           to "Yeni Eklenen Bölümler",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/"                            to "Dizi Arşivi",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?ulke[]=turkiye&yil=&imdb"   to "Yerli",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=aile&yil&imdb"       to "Aile",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=aksiyon&yil&imdb"    to "Aksiyon",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=animasyon&yil&imdb"  to "Animasyon",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=belgesel&yil&imdb"   to "Belgesel",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=bilimkurgu&yil&imdb" to "Bilimkurgu",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=biyografi&yil&imdb"  to "Biyografi",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=dram&yil&imdb"       to "Dram",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=drama&yil&imdb"      to "Drama",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=fantastik&yil&imdb"  to "Fantastik",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=gerilim&yil&imdb"    to "Gerilim",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=gizem&yil&imdb"      to "Gizem",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=komedi&yil&imdb"     to "Komedi",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=korku&yil&imdb"      to "Korku",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=macera&yil&imdb"     to "Macera",
+        "${mainUrl}/tum-bolumler/?tip=populer"                   to "Popüler Dizilerden Son Bölümler",
+        "${mainUrl}/tum-bolumler/"                               to "Yeni Eklenen Bölümler",
+        "${mainUrl}/dizi-arsivi/"                                to "Dizi Arşivi",
+        "${mainUrl}/dizi-arsivi/?ulke%5B0%5D=turkiye&yil&imdb"   to "Yerli",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=aile&yil&imdb"        to "Aile",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=aksiyon&yil&imdb"    to "Aksiyon",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=animasyon&yil&imdb"  to "Animasyon",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=belgesel&yil&imdb"   to "Belgesel",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=bilimkurgu&yil&imdb" to "Bilimkurgu",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=biyografi&yil&imdb"  to "Biyografi",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=dram&yil&imdb"       to "Dram",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=drama&yil&imdb"      to "Drama",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D]=fantastik&yil&imdb"  to "Fantastik",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=gerilim&yil&imdb"    to "Gerilim",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D]=gizem&yil&imdb"      to "Gizem",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=komedi&yil&imdb"     to "Komedi",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=korku&yil&imdb"      to "Korku",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D]=macera&yil&imdb"     to "Macera",
   //      "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=muzik&yil&imdb"      to "Müzik",
  //       "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=muzikal&yil&imdb"    to "Müzikal",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=reality-tv&yil&imdb" to "Reality TV",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=romantik&yil&imdb"   to "Romantik",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=savas&yil&imdb"      to "Savaş",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=reality-tv&yil&imdb" to "Reality TV",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=romantik&yil&imdb"   to "Romantik",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=savas&yil&imdb"      to "Savaş",
  //       "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=spor&yil&imdb"       to "Spor",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=suc&yil&imdb"        to "Suç",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=tarih&yil&imdb"      to "Tarih",
-        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=western&yil&imdb"    to "Western",
-//        "${mainUrl}/dizi-arsivi/page/SAYFA/?tur[0]=yarisma&yil&imdb"    to "Yarışma"
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D=suc&yil&imdb"        to "Suç",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D]=tarih&yil&imdb"      to "Tarih",
+        "${mainUrl}/dizi-arsivi/?tur%5B%5D]=western&yil&imdb"    to "Western",
+//        "${mainUrl}/dizi-arsivi/?tur%5B%5D]=yarisma&yil&imdb"    to "Yarışma"
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
@@ -116,11 +116,8 @@ class DiziBox : MainAPI() {
         val epName = "${szn}x$ep"
 
         val title = "$name - $epName"
-
         val epDoc = fixUrlNull(this.selectFirst("a")?.attr("href"))?.let { app.get(it).document }
-
         val href = fixUrlNull(epDoc?.selectFirst("a.archive-title")?.attr("href")) ?: return null
-
         val posterUrl = fixUrlNull(epDoc?.selectFirst("img.small-thumbnail")?.attr("src"))?.replace("50x50","200x290")
 
         return newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
