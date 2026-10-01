@@ -134,7 +134,7 @@
             "nikyokki"
         ],
         "description": "Binlerce yerli yabanc\u0131 dizi ar\u015fivi, t\u00fcm sezonlar, kesintisiz b\u00f6l\u00fcmler. Sadece dizi izle, Dizimom heryerde seninle!",
-        "fileSize": 34336,
+        "fileSize": 34342,
         "repositoryUrl": "https://github.com/arcilingir/Dizi_Film_2",
         "language": "tr",
         "tvTypes": [
@@ -142,7 +142,7 @@
         ],
         "iconUrl": "https://www.google.com/s2/favicons?domain=www.dizimom.tv&sz=%size%",
         "apiVersion": 1,
-        "fileHash": "sha256-00deb8c67441c169c6c3f93b1bf26700db1a95844dc80747affb1443b8c70a68"
+        "fileHash": "sha256-a5ed8c52ba36ca7c2e5a9b99d1a722bdeb9cddb16c852639b66ebef32b832433"
     },
     {
         "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/DiziPal.cs3",
