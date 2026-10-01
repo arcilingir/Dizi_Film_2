@@ -44,9 +44,7 @@ jobs:
 #        uses: android-actions/setup-android@v3.2.2
 
        - name: Android SDK Ayarla   ##Setup Android SDK
-         uses: android-actions/setup-android@v3
-         with:
-           packages: 'platform-tools build-tools;34.0.0'
+         uses: android-actions/setup-android@v4
     
       - name: Eklentileri Derle
         run: |
