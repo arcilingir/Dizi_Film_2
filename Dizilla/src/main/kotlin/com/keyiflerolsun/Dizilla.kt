@@ -240,10 +240,7 @@ class Dizilla : MainAPI() {
     private fun Element.yeniEklenenler(): SearchResponse? {
         val title = this.selectFirst("h2")?.text() ?: return null
         val href = fixUrlNull(this.attr("href")) ?: return null
-
-
         val posterUrl = extractPosterUrlFromArsiv(this)
-
         val score = this.selectFirst("div.absolute.bottom-0 span")?.text()?.trim()
 
         return newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
@@ -257,12 +254,8 @@ class Dizilla : MainAPI() {
             ?.replace(". Bölüm", "") ?: return null
 
         val title = "$name - $epName"
-
         val epDoc = fixUrlNull(this.attr("href"))?.let { app.get(it, interceptor = interceptor).document }
-
         val href = fixUrlNull(epDoc?.selectFirst("div.poster a")?.attr("href")) ?: return null
-
-
         val posterUrl = if (epDoc != null) {
             extractPosterUrlFromSonBolumler(epDoc.selectFirst("div.poster img") ?: epDoc.selectFirst("div.poster a") ?: epDoc)
         } else {
@@ -358,48 +351,34 @@ class Dizilla : MainAPI() {
         val year = yearElement?.selectFirst("span.text-sm.opacity-60, span.opacity-60")?.text()
             ?.split(" ")?.last()?.toIntOrNull()
 
-
         val description = document.selectFirst("div.mt-2.text-sm, div.text-sm.opacity-80")?.text()?.trim()
-
 
         val tags = document.selectFirst("div.poster h3, div.flex.items-center.flex-wrap.gap-1")?.text()
             ?.split(",")?.map { it.trim() }
 
-
         val ratingString = document.selectFirst("div.flex.items-center span.text-white.text-sm, span.text-yellow-400")
             ?.text()?.trim()
-
 
         val actors = document.select("div.global-box h5, div.cast-item span").map {
             Actor(it.text())
         }
 
         val episodeses = mutableListOf<Episode>()
-
-
         val seasonLinks = document.select("div.flex.items-center.flex-wrap.gap-2.mb-4 a, div.seasons a")
         for (sezon in seasonLinks) {
             val sezonhref = fixUrl(sezon.attr("href"))
             val sezonReq = app.get(sezonhref, interceptor = interceptor)
-
-
             val split = sezonhref.split("-")
             val season = split.lastOrNull { it.toIntOrNull() != null }?.toIntOrNull()
                 ?: sezon.text().replace("Sezon", "").trim().toIntOrNull()
-
             val sezonDoc = sezonReq.document
-
-
             val episodeElements = sezonDoc.select("div.episodes div.cursor-pointer, div.episodes-box div.episode-item")
             for (bolum in episodeElements) {
                 val epLink = bolum.select("a").lastOrNull() ?: continue
                 val epName = epLink.text().trim()
                 val epHref = fixUrlNull(epLink.attr("href")) ?: continue
-
-
                 val epNumberText = bolum.selectFirst("a, span.episode-number")?.text()?.trim() ?: ""
                 val epEpisode = epNumberText.replace("Bölüm", "").trim().toIntOrNull()
-
                 val newEpisode = newEpisode(epHref) {
                     this.name = epName
                     this.season = season
@@ -426,8 +405,6 @@ class Dizilla : MainAPI() {
         callback: (ExtractorLink) -> Unit
     ): Boolean {
         val document = app.get(data, interceptor = interceptor).document
-
-
         val script = document.selectFirst("script#__NEXT_DATA__")?.data()
         if (script != null) {
             try {
@@ -449,7 +426,6 @@ class Dizilla : MainAPI() {
             }
         }
 
-
         val iframes = document.select("iframe")
         if (iframes.isNotEmpty()) {
             for (iframe in iframes) {
@@ -460,7 +436,6 @@ class Dizilla : MainAPI() {
                 }
             }
         }
-
 
         val dataSrcIframes = document.select("[data-src]").filter { it.tagName() == "iframe" || it.hasAttr("data-src") }
         if (dataSrcIframes.isNotEmpty()) {
@@ -490,7 +465,6 @@ class Dizilla : MainAPI() {
             cipher1.init(Cipher.DECRYPT_MODE, keySpec,ivSpec)
             val firstIterationData =
                 cipher1.doFinal(Base64.decode(response, Base64.DEFAULT))
-
             val jsonString = String(firstIterationData)
 
             return jsonString
