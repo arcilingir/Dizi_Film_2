@@ -139,13 +139,10 @@ class FilmMakinesi : MainAPI() {
         val poster = fixUrlNull(document.selectFirst("[property='og:image']")?.attr("content"))
         val description = document.select("div.info-description p").last()?.text()?.trim()
         val tags = document.selectFirst("dt:contains(Tür:) + dd")?.text()?.split(", ")
-        val rating =
-            document.selectFirst("dt:contains(IMDB Puanı:) + dd")?.text()?.trim()
-        val year =
-            document.selectFirst("dt:contains(Yapım Yılı:) + dd")?.text()?.trim()?.toIntOrNull()
+        val rating = document.selectFirst("dt:contains(IMDB Puanı:) + dd")?.text()?.trim()
+        val year = document.selectFirst("dt:contains(Yapım Yılı:) + dd")?.text()?.trim()?.toIntOrNull()
 
-        val durationElement =
-            document.select("dt:contains(Film Süresi:) + dd time").attr("datetime")
+        val durationElement = document.select("dt:contains(Film Süresi:) + dd time").attr("datetime")
         // ? ISO 8601 süre formatını ayrıştırma (örneğin "PT129M")
         val duration = if (durationElement.startsWith("PT") && durationElement.endsWith("M")) {
             durationElement.drop(2).dropLast(1).toIntOrNull() ?: 0
@@ -153,15 +150,12 @@ class FilmMakinesi : MainAPI() {
             0
         }
 
-        val recommendations =
-            document.select("div.film-list div.item-relative").mapNotNull { it.toRecommendResult() }
-        val actors =
-            document.selectFirst("dt:contains(Oyuncular:) + dd")?.text()?.split(", ")?.map {
+        val recommendations = document.select("div.film-list div.item-relative").mapNotNull { it.toRecommendResult() }
+        val actors = document.selectFirst("dt:contains(Oyuncular:) + dd")?.text()?.split(", ")?.map {
                 Actor(it.trim())
             }
 
-        val trailer =
-            fixUrlNull(document.selectXpath("//iframe[@title='Fragman']").attr("data-src"))
+        val trailer = fixUrlNull(document.selectXpath("//iframe[@title='Fragman']").attr("data-src"))
 
         if (url.contains("/dizi/")) {
             val eps = mutableListOf<Episode>()
