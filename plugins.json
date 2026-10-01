@@ -908,26 +908,6 @@
         "fileHash": "sha256-43c66949c3d37d48de07c04c5d545c9bb1fae95e0f60ff8c57a4941b6e8c7913"
     },
     {
-        "url": "https://raw.githubusercontent.com/arcilingir/nik-cloudstream/builds/TLC.cs3",
-        "status": 1,
-        "version": 1,
-        "name": "TLC",
-        "internalName": "TLC",
-        "authors": [
-            "nikyokki"
-        ],
-        "description": "TLC TV dizi ve programlar\u0131n\u0131 takip etmek i\u00e7in ziyaret edin. TLC TV dizi ve programlar\u0131n\u0131 tek par\u00e7a ve hd kalitesiyle izleyin.",
-        "fileSize": 14353,
-        "repositoryUrl": "https://github.com/arcilingir/nik-cloudstream",
-        "language": "tr",
-        "tvTypes": [
-            "TvSeries"
-        ],
-        "iconUrl": "https://www.tlctv.com.tr/favicon.ico",
-        "apiVersion": 1,
-        "fileHash": "sha256-abfff834e70502385b2763702b32b2110bce03a71a5b41e63354eeafcfe4f3ec"
-    },
-    {
         "url": "https://raw.githubusercontent.com/arcilingir/nik-cloudstream/builds/TvDiziler.cs3",
         "status": 1,
         "version": 5,
