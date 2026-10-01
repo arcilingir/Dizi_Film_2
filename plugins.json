@@ -52,7 +52,7 @@
             "nikyokki"
         ],
         "description": "Yabanc\u0131 Dizi izle, T\u00fcm yabanc\u0131 dizilerin yeni ve eski sezonlar\u0131n\u0131 full hd izleyebilece\u011finiz elit site.",
-        "fileSize": 24942,
+        "fileSize": 24943,
         "repositoryUrl": "https://github.com/arcilingir/nik-cloudstream",
         "language": "tr",
         "tvTypes": [
@@ -60,7 +60,7 @@
         ],
         "iconUrl": "https://www.google.com/s2/favicons?domain=www.dizibox.de&sz=%size%",
         "apiVersion": 1,
-        "fileHash": "sha256-495262ccf8f72f7dcfaf82fa703359b55647b885a0cb218bb31479496e0a7825"
+        "fileHash": "sha256-8ea99cd8d45b374e9a5686411076d24bac38294b190641013ee77bde1181253b"
     },
     {
         "url": "https://raw.githubusercontent.com/arcilingir/nik-cloudstream/builds/DiziGom.cs3",
