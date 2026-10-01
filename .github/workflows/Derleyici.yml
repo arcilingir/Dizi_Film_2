@@ -40,8 +40,13 @@ jobs:
           distribution: adopt
           java-version: 17
 
-      - name: Android SDK Ayarla
-        uses: android-actions/setup-android@v3.2.2
+#      - name: Android SDK Ayarla
+#        uses: android-actions/setup-android@v3.2.2
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: 'cmdline-tools;latest platform-tools platforms;android-34 build-tools;34.0.0'
 
       - name: Eklentileri Derle
         run: |
