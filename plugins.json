@@ -280,7 +280,7 @@
             "nikyokki"
         ],
         "description": "Film Makinesi, en yeni ve en g\u00fcncel filmleri sitemizde full HD kalite fark\u0131 ile izleyebilirsiniz. HD film izle denildi\u011finde akla gelen en kaliteli film izleme sitesi.",
-        "fileSize": 23582,
+        "fileSize": 23586,
         "repositoryUrl": "https://github.com/arcilingir/Dizi_Film_2",
         "language": "tr",
         "tvTypes": [
@@ -288,7 +288,7 @@
         ],
         "iconUrl": "https://www.google.com/s2/favicons?domain=filmmakinesi.film&sz=%size%",
         "apiVersion": 1,
-        "fileHash": "sha256-a23a0fee6c8efa429f139205575df5008fce111186c375bf0d9c65ff2951199c"
+        "fileHash": "sha256-149181de9ae7de2a5b84bce3ca35c326caea35fe7030a2857ef436272d89eb23"
     },
     {
         "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/FilmModu.cs3",
