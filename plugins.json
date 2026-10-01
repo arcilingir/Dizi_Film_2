@@ -93,7 +93,7 @@
             "nikyokki"
         ],
         "description": "Dizilla t\u00fcm yabanc\u0131 dizileri \u00fccretsiz olarak T\u00fcrk\u00e7e Dublaj ve altyaz\u0131l\u0131 se\u00e7enekleri ile 1080P kalite izleyebilece\u011finiz yeni nesil yabanc\u0131 dizi izleme siteniz.",
-        "fileSize": 35835,
+        "fileSize": 35832,
         "repositoryUrl": "https://github.com/arcilingir/Dizi_Film_2",
         "language": "tr",
         "tvTypes": [
@@ -101,7 +101,7 @@
         ],
         "iconUrl": "https://www.google.com/s2/favicons?domain=dizilla.club&sz=%size%",
         "apiVersion": 1,
-        "fileHash": "sha256-7d70ad2e47f04eb237f8ee04df4296db59abe24829c42780c448192d0efdc1bf"
+        "fileHash": "sha256-b135327694ba11a33f59cb67d278933a1ec38a363f5d892966182b8f6747c9a9"
     },
     {
         "url": "https://raw.githubusercontent.com/arcilingir/Dizi_Film_2/builds/DiziMag.cs3",
